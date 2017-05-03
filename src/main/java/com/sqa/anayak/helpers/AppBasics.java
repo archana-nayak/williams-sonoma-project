@@ -1,8 +1,8 @@
 /**
  *   File Name: AppBasics.java<br>
-
  *
  *   Nayak, Archana<br>
+ *   LastName, FirstName<br>
  *   Java Boot Camp Exercise<br>
  *   Instructor: Jean-francois Nepton<br>
  *   Created: Apr 29, 2017
@@ -20,8 +20,11 @@ import java.util.*;
  * <p>
  * //ADDD (description of core methods)
  * 
+ * 
  * @author Nayak, Archana
  * @version 1.0.1
+ * @author LastName, FirstName
+ * @version 1.0.0
  * @since 1.0
  *
  */
@@ -30,7 +33,7 @@ public class AppBasics {
 
 	/**
 	 * @param name
-	 * Prints a farewell message to the output stream
+	 *            Prints a farewell message to the output stream
 	 */
 	public static void farewellUser(String name) {
 		System.out.println("Thank you for using my app " + name);
@@ -38,9 +41,8 @@ public class AppBasics {
 
 	/**
 	 * @param appName
-	 * @return string
-	 * Welcomes the user and scans for the users
-	 * name from the input stream.
+	 * @return string Welcomes the user and scans for the users name from the
+	 *         input stream.
 	 */
 	public static String greetUser(String appName) {
 		String name;
@@ -52,9 +54,8 @@ public class AppBasics {
 
 	/**
 	 * @param question
-	 * @return boolean
-	 * Outputs a question to the output stream(user) and scans
-	 * and parses the input stream. Returns a boolean.
+	 * @return boolean Outputs a question to the output stream(user) and scans
+	 *         and parses the input stream. Returns a boolean.
 	 */
 	public static boolean requestBoolean(String question) {
 		System.out.println(question);
@@ -62,11 +63,10 @@ public class AppBasics {
 
 	}
 
-	/** 
+	/**
 	 * @param question
-	 * @return char
-	 * Outputs a question to the output stream(user) and scans and
-	 * parses the input stream. Returns a char.
+	 * @return char Outputs a question to the output stream(user) and scans and
+	 *         parses the input stream. Returns a char.
 	 */
 	public static char requestChar(String question) {
 		System.out.println(question);
@@ -78,9 +78,8 @@ public class AppBasics {
 
 	/**
 	 * @param question
-	 * @return float
-	 * Outputs a question to the output stream(user) and scans and
-	 * parses the input stream. Returns a float.
+	 * @return float Outputs a question to the output stream(user) and scans and
+	 *         parses the input stream. Returns a float.
 	 */
 	public static float requestFloat(String question) {
 		System.out.println(question);
@@ -89,9 +88,8 @@ public class AppBasics {
 
 	/**
 	 * @param question
-	 * @return integer
-	 * Outputs a question to the output stream(user) and scans and
-	 * parses the input stream. Returns a integer.
+	 * @return integer Outputs a question to the output stream(user) and scans
+	 *         and parses the input stream. Returns a integer.
 	 */
 	public static int requestInt(String question) {
 		System.out.print(question);
@@ -101,19 +99,18 @@ public class AppBasics {
 
 	/**
 	 * @param question
-	 * @return long
-	 * Outputs a question to the output stream(user) and scans and
-	 * parses the input stream. Returns a long.
+	 * @return long Outputs a question to the output stream(user) and scans and
+	 *         parses the input stream. Returns a long.
 	 */
 	public static long requestLong(String question) {
 		System.out.println(question);
 		return Long.parseLong(scanner.nextLine().trim());
 	}
 
-	/** 
+	/**
 	 * @param question
 	 * @return short Outputs a question to the output stream(user) and scans and
-	 * parses the input stream. Returns a short.
+	 *         parses the input stream. Returns a short.
 	 */
 	public static short requestShort(String question) {
 		System.out.println(question);
@@ -123,11 +120,10 @@ public class AppBasics {
 	/**
 	 * @param question
 	 * @return String. Outputs a question to the output stream(user) and scans
-	 * and parses the input stream. Returns a string.
+	 *         and parses the input stream. Returns a string.
 	 */
 	public static String requestString(String question) {
 		System.out.println(question);
 		return scanner.nextLine().trim();
 	}
-
 }
