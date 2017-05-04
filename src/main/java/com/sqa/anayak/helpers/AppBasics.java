@@ -45,10 +45,8 @@ public class AppBasics {
 	 *         input stream.
 	 */
 	public static String greetUser(String appName) {
-		String name;
 		System.out.println("welecome to the " + appName);
 		System.out.println("Could i get your name: ");
-
 		return scanner.nextLine();
 	}
 
@@ -59,6 +57,7 @@ public class AppBasics {
 	 */
 	public static boolean requestBoolean(String question) {
 		System.out.println(question);
+		System.out.println("Please enter true/false");
 		return Boolean.parseBoolean(scanner.nextLine().trim());
 
 	}
@@ -71,9 +70,18 @@ public class AppBasics {
 	public static char requestChar(String question) {
 		System.out.println(question);
 		char inputChar = scanner.nextLine().trim().charAt(0);
-		// char ch = scanner.next(".").charAt(0);
-		// char ch = scanner.findLine(".").CharAt(0);
 		return inputChar;
+	}
+
+	/**
+	 * 
+	 * @param question
+	 * @return Double. Outputs a question to the output stream(user) and scans
+	 *         and parses the input stream. Returns a double.
+	 */
+	public static Double requestDouble(String question) {
+		System.out.println(question);
+		return Double.parseDouble(scanner.nextLine().trim());
 	}
 
 	/**
