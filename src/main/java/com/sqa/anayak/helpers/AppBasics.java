@@ -13,6 +13,8 @@ package com.sqa.anayak.helpers;
 
 import java.util.*;
 
+import com.sqa.anayak.helpers.exceptions.*;
+
 /**
  * AppBasics //ADDD (description of class)
  * <p>
@@ -101,8 +103,45 @@ public class AppBasics {
 	 */
 	public static int requestInt(String question) {
 		System.out.print(question);
-		int value = Integer.parseInt(scanner.nextLine());// (input);
+		int value = Integer.parseInt(scanner.nextLine().trim());
 		return value;
+	}
+
+	/**
+	 * @param string
+	 * @param min
+	 * @param max
+	 * @return integer Outputs a question to the output stream(user) and scans
+	 *         and parses the input stream. Returns a integer.
+	 */
+	public static int requestInt(String question, int min, int max, String errorMessage) {
+
+		int value = 0;
+		String input = "";
+		boolean isValid = false;
+		while (!isValid) {
+			try {
+				System.out.print(question + " ");
+				input = scanner.nextLine().trim();
+				value = Integer.parseInt(input);
+				if (value < min) {
+					throw new UnderMinRangeException();
+				} else if (value > max) {
+					throw new OverMaxRangeException();
+				}
+				isValid = true;
+			} catch (NumberFormatException e) {
+
+				System.out.println("You have not entered valid numeric value (" + input + ")");
+
+			} catch (UnderMinRangeException e) {
+				System.out.println(errorMessage + "( " + input + ")[under " + min + "]");
+			} catch (OverMaxRangeException e) {
+				System.out.println(errorMessage + "( " + input + ")[over " + max + "]");
+			}
+		}
+		return value;
+
 	}
 
 	/**
