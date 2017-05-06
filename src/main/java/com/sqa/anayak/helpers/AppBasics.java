@@ -46,7 +46,7 @@ public class AppBasics {
 	 */
 	public static String greetUser(String appName) {
 		System.out.println("welecome to the " + appName);
-		System.out.println("Could i get your name: ");
+		System.out.print("Could i get your name: ");
 		return scanner.nextLine();
 	}
 
@@ -56,8 +56,8 @@ public class AppBasics {
 	 *         and parses the input stream. Returns a boolean.
 	 */
 	public static boolean requestBoolean(String question) {
-		System.out.println(question);
-		System.out.println("Please enter true/false");
+		System.out.print(question);
+		System.out.print(" Please enter true/false: ");
 		return Boolean.parseBoolean(scanner.nextLine().trim());
 
 	}
@@ -68,7 +68,7 @@ public class AppBasics {
 	 *         parses the input stream. Returns a char.
 	 */
 	public static char requestChar(String question) {
-		System.out.println(question);
+		System.out.print(question);
 		char inputChar = scanner.nextLine().trim().charAt(0);
 		return inputChar;
 	}
@@ -80,7 +80,7 @@ public class AppBasics {
 	 *         and parses the input stream. Returns a double.
 	 */
 	public static Double requestDouble(String question) {
-		System.out.println(question);
+		System.out.print(question);
 		return Double.parseDouble(scanner.nextLine().trim());
 	}
 
@@ -90,7 +90,7 @@ public class AppBasics {
 	 *         parses the input stream. Returns a float.
 	 */
 	public static float requestFloat(String question) {
-		System.out.println(question);
+		System.out.print(question);
 		return Float.parseFloat(scanner.nextLine().trim());
 	}
 
@@ -111,7 +111,7 @@ public class AppBasics {
 	 *         parses the input stream. Returns a long.
 	 */
 	public static long requestLong(String question) {
-		System.out.println(question);
+		System.out.print(question);
 		return Long.parseLong(scanner.nextLine().trim());
 	}
 
@@ -121,7 +121,7 @@ public class AppBasics {
 	 *         parses the input stream. Returns a short.
 	 */
 	public static short requestShort(String question) {
-		System.out.println(question);
+		System.out.print(question);
 		return Short.parseShort(scanner.nextLine().trim());
 	}
 
@@ -131,7 +131,7 @@ public class AppBasics {
 	 *         and parses the input stream. Returns a string.
 	 */
 	public static String requestString(String question) {
-		System.out.println(question);
+		System.out.print(question);
 		return scanner.nextLine().trim();
 	}
 }
